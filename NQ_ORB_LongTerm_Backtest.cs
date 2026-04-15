@@ -218,14 +218,12 @@ namespace NinjaTrader.NinjaScript.Strategies
                 {
                     orbFormed = true;
 
-                    try
-                    {
-                        Draw.Rectangle(this, "ORB_" + CurrentBar, true,
-                            new TimeSpan(9, 30, 0), orbLow,
-                            new TimeSpan(9, 44, 0), orbHigh,
-                            Brushes.Transparent, Brushes.CornflowerBlue, 2);
-                    }
-                    catch { }
+                    // Draw ORB rectangle (optional - comment out if brushes cause issues)
+                    // Draw.Rectangle(this, "ORB_" + CurrentBar, true,
+                    //     new TimeSpan(9, 30, 0), orbLow,
+                    //     new TimeSpan(9, 44, 0), orbHigh,
+                    //     System.Windows.Media.Brushes.Transparent,
+                    //     System.Windows.Media.Brushes.CornflowerBlue, 2);
 
                     Print(string.Format("ORB Formed: High={0:F2} Low={1:F2} Range={2:F2}",
                         orbHigh, orbLow, orbRange));
